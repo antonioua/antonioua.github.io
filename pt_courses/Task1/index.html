@@ -1,0 +1,55 @@
+<!DCongratulationstml>
+<head>
+    <script>
+        /*
+         Если не корректный ввод - попросить ввести еще раз, если меньше 18 закрыть страницу
+         */
+        var userInput;
+        var conditions = (userInput > 100 || userInput <= 0 || isNaN(userInput) == true || userInput == '' || userInput == null || userInput.trim().length == 0);
+
+        //check endlessly if user input is correct
+        do {
+            userInput = prompt('How old are you?', '');
+            //check if user pressed Cancel button
+            if (userInput == null) {
+                window.open(location, '_self').close();
+                break;
+            }
+            //user's age matches criteria and userInput is not whitespaces
+            if (userInput >= 18 && userInput <= 100 && userInput.trim().length != 0) {
+                break;
+            }
+            //user age doesn't match and userInput is not whitespaces
+            if (userInput < 18 && userInput.trim().length != 0 ) {
+                window.open(location, '_self').close();
+                break;
+            }
+            //user entered garbage data
+            if (conditions) {
+                alert('You have entered invalid data. Please try again.');
+            }
+        }
+        while (conditions);
+
+    </script>
+</head>
+<body>
+
+<h1>Task 1</h1>
+
+<p><b>Congratulations, you have entered the site</b></p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Examples</title>
+    <meta charset="utf-8">
+    <style>
+        .cl1 * {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<p>Hello</p>
+<ul class="cl1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+<script>
+    /*
+     Вешаем обработчик на контейнер.
+     В обработчике: получаем event.target.
+     В обработчике: если event.target или один из его родителей в контейнере (this) — интересующий нас элемент — обработать его.
+     */
+
+    //var elem = document.querySelector('ul');
+    var elem = document.getElementsByClassName('cl1')[0];
+    //console.log(elem);
+    elem.onclick = function(event) {
+        event.target.style.background = 'yellow';
+        alert('You are on ' + event.target.tagName + ' in ' + this.tagName);
+    }
+
+</script>
+
+</body>
+</html>

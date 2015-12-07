@@ -1,0 +1,29 @@
+/*
+ //var questionAge = window.prompt("sometext","defaultText");
+ var userInput;
+
+ //var proceed = true;
+ do {
+ userInput = prompt('How old are you', '');
+ if ((userInput >= 18) && (userInput < 100) && (isNaN(userInput) == false) && (userInput != '') && (userInput != null)) {
+ break;
+ } else {
+ alert('You are not 18! Try again')
+ }
+ }
+ while (true);
+
+
+
+
+
+
+function closeWindow() {
+    netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
+    alert("This will close the window");
+    window.open('','_self');
+    window.close();
+}
+
+<a href="#" onclick = "closeWindow();">close</a>
+*/
